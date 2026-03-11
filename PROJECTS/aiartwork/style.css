@@ -1,0 +1,135 @@
+/* Basic reset and typography */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color:#333;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+}
+
+.container{
+    background:#fff;
+    width:90%;
+    max-width:400px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    padding:2rem;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.profile-pic{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #6c63ff;
+    margin-bottom:1rem;
+    transition:transform 0.3s;
+}
+.profile-pic:hover{
+    transform:scale(1.1);
+}
+
+h1{
+    margin-bottom:0.5rem;
+    font-size:1.8rem;
+    color:#6c63ff;
+}
+
+p.message{
+    font-size:1rem;
+    margin-bottom:1.5rem;
+    line-height:1.4;
+}
+
+.links{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    flex-wrap:wrap;
+}
+
+.links a{
+    text-decoration:none;
+    color:#fff;
+    background:#6c63ff;
+    padding:0.6rem 1rem;
+    border-radius:8px;
+    transition:background 0.3s;
+    font-size:0.9rem;
+}
+
+.links a:hover{
+    background:#5550ff;
+}
+
+.more{
+    margin-top:1.5rem;
+    font-size:0.9rem;
+    color:#6c63ff;
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+#extra{
+    display:none;
+    margin-top:1rem;
+    font-size:0.9rem;
+    color:#555;
+}
+
+/* Dark mode styles */
+body.dark{
+    background: linear-gradient(135deg, #2b2d42 0%, #343a40 100%);
+    color:#f1f1f1;
+}
+body.dark .container{
+    background:#3b3f51;
+}
+body.dark h1{
+    color:#ff6b6b;
+}
+body.dark .links a{
+    background:#ff6b6b;
+}
+body.dark .links a:hover{
+    background:#ff4b4b;
+}
+
+.theme-toggle{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:30px;
+    height:30px;
+    background:#6c63ff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    color:#fff;
+    font-size:1.2rem;
+    user-select:none;
+    transition:background 0.3s;
+}
+.theme-toggle:hover{
+    background:#5550ff;
+}
+
+body.dark .theme-toggle{
+    background:#ff6b6b;
+}
+body.dark .theme-toggle:hover{
+    background:#ff4b4b;
+}
